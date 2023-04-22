@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+allprojects {
+    group = 'com.bitflow.scrapeej'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '11'
+
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
