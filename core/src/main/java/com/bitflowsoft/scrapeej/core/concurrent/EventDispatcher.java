@@ -1,4 +1,6 @@
-package com.bitflowsoft.scrapeej.core.event;
+package com.bitflowsoft.scrapeej.core.concurrent;
+
+import com.bitflowsoft.scrapeej.core.event.EventHolder;
 
 /**
  * Receive messages about all events and do task of load balancing to child event loops
@@ -7,4 +9,6 @@ package com.bitflowsoft.scrapeej.core.event;
  * @author gamzaman
  * */
 public interface EventDispatcher {
+
+    void addEvent(Promise<?> job);
 }

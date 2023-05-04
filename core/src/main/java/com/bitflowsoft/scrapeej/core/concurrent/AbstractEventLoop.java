@@ -6,18 +6,20 @@ import java.util.concurrent.Executor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.bitflowsoft.scrapeej.core.event.EventHolder;
+import com.bitflowsoft.scrapeej.core.util.Time;
 
 public abstract class AbstractEventLoop implements EventLoop {
 
-    private static Logger logger = LoggerFactory.getLogger(AbstractEventLoop.class);
-    private final EventQueue<? extends EventHolder> eventQueue;
+    private static final Logger logger = LoggerFactory.getLogger(AbstractEventLoop.class);
+    private final EventQueue<Promise<?>> eventQueue;
+    private final Executor executor;
+    private final EventLoopFlagHolder eventLoopFlagHolder;
     private Thread thread;
-    private Executor executor;
-    private EventLoopFlagHolder eventLoopFlagHolder;
+    private Long lastRunTimeMills = -1L;
 
-    protected AbstractEventLoop(final EventQueue<? extends EventHolder> eventQueue) {
+    protected AbstractEventLoop(final EventQueue<Promise<?>> eventQueue, final Executor executor) {
         this.eventQueue = eventQueue;
+        this.executor = executor;
         this.eventLoopFlagHolder = new EventLoopFlagHolder(EventLoopState.CLOSE);
     }
 
@@ -26,28 +28,21 @@ public abstract class AbstractEventLoop implements EventLoop {
         return Thread.currentThread() == thread;
     }
 
-    public boolean isClosed() {
-        return eventLoopFlagHolder.getFlag() == EventLoopState.CLOSE;
-    }
-
     @Override
     public <T> Promise<T> execute0(Callable<T> runnable) {
         final Promise<T> promise = new DefaultPromise<>(this, runnable);
-        // TODO: add task to event queue
+        eventQueue.add(promise);
         return promise;
     }
 
     @Override
-    public Promise<Void> execute0(Runnable command) {
-        final Callable<Void> callable = new Callable<Void>() {
-            @Override
-            public Void call() throws Exception {
-                command.run();
-                return null;
-            }
+    public Promise<Void> execute0(Runnable runnable) {
+        final Callable<Void> callable = () -> {
+            runnable.run();
+            return null;
         };
         final Promise<Void> promise = new DefaultPromise<>(this, callable);
-        // TODO: add task to event queue
+        eventQueue.add(promise);
         return promise;
     }
 
@@ -62,18 +57,26 @@ public abstract class AbstractEventLoop implements EventLoop {
             eventLoopFlagHolder.setFlag(EventLoopState.STARTED);
             try {
                 while (eventLoopFlagHolder.getFlag() != EventLoopState.CLOSE) {
-                    final EventHolder eventHolder = eventQueue.take();
-                    if (eventHolder == null) {
-                        continue;
-                    }
-
+                    runAllTasks();
                 }
             } catch (Exception e) {
                 logger.error("EventLoop Exception", e);
             } finally {
                 // TODO: shutdown gracefully
-
             }
         });
+    }
+
+    public void runAllTasks() {
+        if (!isEventLoop()) {
+            return;
+        }
+        while (true) {
+            Promise<?> promise = eventQueue.take();
+            if (promise == null) {
+                break;
+            }
+            promise.run();
+        }
     }
 }

@@ -1,6 +1,6 @@
 package com.bitflowsoft.scrapeej.core.event;
 
-public enum Events {
+public enum EventType {
 
     Handle,
     Request,

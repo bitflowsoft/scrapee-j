@@ -1,5 +1,14 @@
-package com.bitflowsoft.scrapeej.core.concurrent;
+package com.bitflowsoft.scrapeej.core.event;
 
-public class EventHolder {
+import java.util.concurrent.Callable;
 
+public abstract class EventHolder {
+
+    private final EventType eventType;
+
+    public EventHolder(final EventType eventType) {
+        this.eventType = eventType;
+    }
+
+    public abstract Callable<?> task();
 }
