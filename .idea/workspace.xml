@@ -5,25 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15be0cbf-d142-4670-a18f-2482ad89bdaf" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/AbstractEventLoop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/DefaultPromise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/DefaultThreadEventLoopExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventDispatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventLoop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventLoopFlagHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventLoopGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventLoopState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/Promise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/PromiseEventQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/PromiseListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/event/EventHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/event/EventType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/event/RequestEventHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/util/RuntimeAssertions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/util/Time.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/AbstractPromise.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/DefaultPromise.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/DefaultPromise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/Promise.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/Promise.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

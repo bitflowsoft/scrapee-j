@@ -13,4 +13,8 @@ public interface Promise<T> extends Runnable {
     void setSuccess(T value);
 
     void setFailure(Throwable throwable);
+
+    T get();
+
+    Throwable getFailure();
 }
