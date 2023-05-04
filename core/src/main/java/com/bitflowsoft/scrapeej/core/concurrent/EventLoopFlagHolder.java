@@ -9,7 +9,9 @@ public class EventLoopFlagHolder {
     }
 
     public void setFlag(final EventLoopState eventLoopState) {
-        this.eventLoopState = eventLoopState;
+        synchronized (this) {
+            this.eventLoopState = eventLoopState;
+        }
     }
 
     public EventLoopState getFlag() {

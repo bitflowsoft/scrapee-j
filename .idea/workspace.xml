@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15be0cbf-d142-4670-a18f-2482ad89bdaf" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/AbstractPromise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/DefaultPromise.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/DefaultPromise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/Promise.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/Promise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventLoopFlagHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventLoopFlagHolder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
