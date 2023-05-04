@@ -12,7 +12,7 @@ import java.util.concurrent.ExecutorService;
  *
  * @author gamzaman
  * */
-public interface EventLoop extends ExecutorService {
+public interface EventLoop extends ExecutorService, Runnable {
 
     /**
      * Check event loop thread the currently running thread
