@@ -3,6 +3,11 @@ package com.bitflowsoft.scrapeej.core.concurrent;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * Array Round-Robin event loop selector implementation.
+ *
+ * @author gamzaman
+ * */
 public class RoundRobinEventLoopSelector implements EventLoopSelector {
 
     private final List<EventLoop> eventLoops;

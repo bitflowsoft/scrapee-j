@@ -1,16 +1,22 @@
 package com.bitflowsoft.scrapeej.core.concurrent;
 
+import java.util.LinkedList;
 import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 import static com.bitflowsoft.scrapeej.core.util.RuntimeAssertions.checkNull;
 
-public class PromiseEventQueue implements EventQueue<Promise<?>> {
+/**
+ * Thread un-safety event queue An event queue implemented with the assumption that all events are not shared.
+ * By default, event loops do not share an event queue.
+ *
+ * @author gamzaman
+ * */
+public class UnsafePromiseEventQueue implements EventQueue<Promise<?>> {
 
     private final Queue<Promise<?>> queue;
 
-    public PromiseEventQueue() {
-        this.queue = new ConcurrentLinkedQueue<>();
+    public UnsafePromiseEventQueue() {
+        this.queue = new LinkedList<>();
     }
 
     @Override

@@ -13,7 +13,7 @@ public class DefaultPromise<T> extends AbstractPromise<T> {
 
     @Override
     public void run() {
-        if (!eventLoop.isEventLoop()) {
+        if (eventLoop == null || !eventLoop.isEventLoop()) {
             return;
         }
         try {

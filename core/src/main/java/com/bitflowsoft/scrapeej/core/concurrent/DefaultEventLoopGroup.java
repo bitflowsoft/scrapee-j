@@ -3,7 +3,6 @@ package com.bitflowsoft.scrapeej.core.concurrent;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
 import org.slf4j.Logger;
@@ -15,11 +14,9 @@ public class DefaultEventLoopGroup implements EventLoopGroup {
     private final List<EventLoop> eventLoops;
     private final EventDispatcher eventDispatcher;
     private final EventLoopSelector eventLoopSelector;
-    private final int loopCount;
 
     public DefaultEventLoopGroup(final int loopCount, final Class<? extends EventLoop> eventLoopClass) {
         this.eventLoops = new ArrayList<>(loopCount);
-        this.loopCount = loopCount;
         this.eventLoopSelector = new RoundRobinEventLoopSelector(this.eventLoops);
         this.eventDispatcher = new DefaultEventDispatcher(this.eventLoopSelector);
     }
