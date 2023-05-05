@@ -1,5 +1,7 @@
 package com.bitflowsoft.scrapeej.core.concurrent;
 
+import java.util.concurrent.Callable;
+
 import com.bitflowsoft.scrapeej.core.event.EventHolder;
 
 /**
@@ -10,5 +12,7 @@ import com.bitflowsoft.scrapeej.core.event.EventHolder;
  * */
 public interface EventDispatcher {
 
-    void addEvent(Promise<?> job);
+    void addEvent(Runnable runnable);
+
+    <T> void addEvent(Callable<T> callable);
 }

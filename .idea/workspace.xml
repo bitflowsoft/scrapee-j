@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15be0cbf-d142-4670-a18f-2482ad89bdaf" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/DefaultEventLoop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/util/exceptions/OperationNotSupportedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/DefaultEventDispatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/DefaultEventLoopGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventLoopSelector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/RoundRobinEventLoopSelector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/test/java/com/bitflowsoft/scrapeej/core/concurrent/RoundRobinEventLoopSelectorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/AbstractEventLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/AbstractEventLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventLoopGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventLoopGroup.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +30,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -43,10 +48,74 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "jdk.selected.JAVA_MODULE": "11",
     "settings.editor.selected.configurable": "preferences.pathVariables"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.bitflowsoft.scrapeej.core.concurrent" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.RoundRobinEventLoopSelectorTest.roundRobinThreadSafeTest">
+    <configuration name="RoundRobinEventLoopSelectorTest.roundRobinEventLoopSelectTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":core:test" />
+            <option value="--tests" />
+            <option value="&quot;com.bitflowsoft.scrapeej.core.concurrent.RoundRobinEventLoopSelectorTest.roundRobinEventLoopSelectTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="RoundRobinEventLoopSelectorTest.roundRobinThreadSafeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":core:test" />
+            <option value="--tests" />
+            <option value="&quot;com.bitflowsoft.scrapeej.core.concurrent.RoundRobinEventLoopSelectorTest.roundRobinThreadSafeTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.RoundRobinEventLoopSelectorTest.roundRobinThreadSafeTest" />
+        <item itemvalue="Gradle.RoundRobinEventLoopSelectorTest.roundRobinEventLoopSelectTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">

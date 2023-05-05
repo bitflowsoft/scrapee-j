@@ -1,6 +1,5 @@
 package com.bitflowsoft.scrapeej.core.concurrent;
 
-import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -8,7 +7,7 @@ import java.util.concurrent.TimeUnit;
  *
  * @author gamzaman
  * */
-public interface EventLoopGroup extends ExecutorService, Iterable<EventLoop>, EventDispatcher {
+public interface EventLoopGroup extends Iterable<EventLoop> {
 
     /**
      * Kills all currently running tasks and stops all EventLoops.
@@ -17,4 +16,6 @@ public interface EventLoopGroup extends ExecutorService, Iterable<EventLoop>, Ev
      * @param unit timeout unit
      * */
     void shutdownGracefully(Long timeout, TimeUnit unit);
+
+    EventDispatcher getEventDispatcher();
 }
