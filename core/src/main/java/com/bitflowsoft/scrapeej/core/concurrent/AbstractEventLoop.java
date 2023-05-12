@@ -12,6 +12,7 @@ import java.util.concurrent.TimeoutException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.bitflowsoft.scrapeej.core.util.Time;
 import com.bitflowsoft.scrapeej.core.util.exceptions.OperationNotSupportedException;
 
 public abstract class AbstractEventLoop implements EventLoop {
@@ -21,7 +22,6 @@ public abstract class AbstractEventLoop implements EventLoop {
     private final Executor executor;
     private final EventLoopFlagHolder eventLoopFlagHolder;
     private Thread thread;
-    private Long lastRunTimeMills = -1L;
 
     protected AbstractEventLoop(final EventQueue<Promise<?>> eventQueue, final Executor executor) {
         this.eventQueue = eventQueue;
@@ -78,7 +78,7 @@ public abstract class AbstractEventLoop implements EventLoop {
 
     @Override
     public void shutdown() {
-
+        eventLoopFlagHolder.setFlag(EventLoopState.CLOSE);
     }
 
     @Override
@@ -88,7 +88,13 @@ public abstract class AbstractEventLoop implements EventLoop {
 
     @Override
     public boolean isShutdown() {
-        return false;
+        if (eventLoopFlagHolder.getFlag() == EventLoopState.STARTED) {
+            return false;
+        }
+        logger.info("start shutdown gracefully");
+        int drainedTask =  drainRemainingTasks();
+        logger.info("successfully drained task {}.", drainedTask);
+        return true;
     }
 
     @Override
@@ -139,6 +145,21 @@ public abstract class AbstractEventLoop implements EventLoop {
         throw new OperationNotSupportedException("AbstractEventLoop:invokeAll not provided");
     }
 
+    private int drainRemainingTasks() {
+        int task = 0;
+        while (true) {
+            final Promise<?> promise = take();
+            if (promise == null) {
+                break;
+            }
+            long start = Time.getCurrentTimeMills();
+            promise.run();
+            task += 1;
+            logger.info("task finished {}ms", Time.getCurrentTimeMills() - start);
+        }
+        return task;
+    }
+
     protected Promise<?> take() {
         return eventQueue.take();
     }
@@ -148,11 +169,16 @@ public abstract class AbstractEventLoop implements EventLoop {
             return;
         }
         while (true) {
+            if (eventLoopFlagHolder.getFlag() == EventLoopState.CLOSE) {
+                break;
+            }
             final Promise<?> promise = take();
             if (promise == null) {
                 break;
             }
+            long start = Time.getCurrentTimeMills();
             promise.run();
+            logger.info("task finished {}ms", Time.getCurrentTimeMills() - start);
         }
     }
 }

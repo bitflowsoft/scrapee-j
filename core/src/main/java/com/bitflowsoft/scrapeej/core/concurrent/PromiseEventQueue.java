@@ -1,7 +1,7 @@
 package com.bitflowsoft.scrapeej.core.concurrent;
 
-import java.util.LinkedList;
 import java.util.Queue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 import static com.bitflowsoft.scrapeej.core.util.RuntimeAssertions.checkNull;
 
@@ -11,12 +11,12 @@ import static com.bitflowsoft.scrapeej.core.util.RuntimeAssertions.checkNull;
  *
  * @author gamzaman
  * */
-public class UnsafePromiseEventQueue implements EventQueue<Promise<?>> {
+public class PromiseEventQueue implements EventQueue<Promise<?>> {
 
     private final Queue<Promise<?>> queue;
 
-    public UnsafePromiseEventQueue() {
-        this.queue = new LinkedList<>();
+    public PromiseEventQueue() {
+        this.queue = new LinkedBlockingQueue<>();
     }
 
     @Override
@@ -33,5 +33,10 @@ public class UnsafePromiseEventQueue implements EventQueue<Promise<?>> {
     @Override
     public boolean isEmpty() {
         return queue.isEmpty();
+    }
+
+    @Override
+    public int size() {
+        return queue.size();
     }
 }

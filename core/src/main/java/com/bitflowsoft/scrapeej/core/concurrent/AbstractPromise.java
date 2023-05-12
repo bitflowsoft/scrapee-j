@@ -9,7 +9,7 @@ public abstract class AbstractPromise<T> implements Promise<T> {
 
     private Throwable throwable = null;
     private T value = null;
-    private Callable<T> callable;
+    private final Callable<T> callable;
 
     private final List<PromiseListener<T>> successListeners;
     private final List<PromiseListener<Throwable>> failureListeners;

@@ -24,7 +24,7 @@ public class RoundRobinEventLoopSelector implements EventLoopSelector {
         final int loopSize = eventLoops.size();
         if (_index > loopSize) {
             index.set(0);
-            return eventLoops.get(index.getAndIncrement());
+            return eventLoops.get(0);
         }
         return eventLoops.get(_index - 1);
     }

@@ -7,4 +7,6 @@ public interface EventQueue<Type> {
     Type take();
 
     boolean isEmpty();
+
+    int size();
 }

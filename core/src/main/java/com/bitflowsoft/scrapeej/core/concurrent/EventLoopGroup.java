@@ -9,13 +9,12 @@ import java.util.concurrent.TimeUnit;
  * */
 public interface EventLoopGroup extends Iterable<EventLoop> {
 
+    int FIT_SYSTEM_EVENT_LOOP_COUNT = Runtime.getRuntime().availableProcessors() * 2;
+
     /**
      * Kills all currently running tasks and stops all EventLoops.
-     *
-     * @param timeout timeout by all tasks
-     * @param unit timeout unit
      * */
-    void shutdownGracefully(Long timeout, TimeUnit unit);
+    void shutdownGracefully();
 
     EventDispatcher getEventDispatcher();
 }

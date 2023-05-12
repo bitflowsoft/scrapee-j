@@ -10,9 +10,9 @@ class RoundRobinEventLoopSelectorTest {
 
     @BeforeEach
     void before() {
-        EventLoop loop1 = new DefaultEventLoop(new UnsafePromiseEventQueue(), new DefaultThreadEventLoopExecutor());
-        EventLoop loop2 = new DefaultEventLoop(new UnsafePromiseEventQueue(), new DefaultThreadEventLoopExecutor());
-        EventLoop loop3 = new DefaultEventLoop(new UnsafePromiseEventQueue(), new DefaultThreadEventLoopExecutor());
+        EventLoop loop1 = new DefaultEventLoop();
+        EventLoop loop2 = new DefaultEventLoop();
+        EventLoop loop3 = new DefaultEventLoop();
 
         selector = new RoundRobinEventLoopSelector(Arrays.asList(loop1, loop2, loop3));
     }
