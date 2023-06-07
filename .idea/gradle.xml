@@ -10,6 +10,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/drivers" />
+            <option value="$PROJECT_DIR$/drivers/chrome" />
           </set>
         </option>
       </GradleProjectSettings>
