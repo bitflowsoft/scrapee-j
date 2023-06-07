@@ -6,33 +6,33 @@ import com.microsoft.playwright.Playwright;
 
 public class PlaywrightContext {
 
-  private static PlaywrightContext playwrightContext;
-  private final Playwright playwright;
+    private static PlaywrightContext playwrightContext;
+    private final Playwright playwright;
 
-  private PlaywrightContext() {
-    playwright = Playwright.create();
-  }
-
-  public static synchronized PlaywrightContext instance() {
-    if (playwrightContext == null) {
-      playwrightContext = new PlaywrightContext();
+    private PlaywrightContext() {
+        playwright = Playwright.create();
     }
-    return playwrightContext;
-  }
 
-  public Playwright getPlaywright() {
-    return playwright;
-  }
+    public static synchronized PlaywrightContext instance() {
+        if (playwrightContext == null) {
+            playwrightContext = new PlaywrightContext();
+        }
+        return playwrightContext;
+    }
 
-  public synchronized Browser chrome(final LaunchOptions launchOptions) {
-    return playwright.chromium().launch(launchOptions);
-  }
+    public Playwright getPlaywright() {
+        return playwright;
+    }
 
-  public synchronized Browser firefox(final LaunchOptions launchOptions) {
-    return playwright.firefox().launch(launchOptions);
-  }
+    public synchronized Browser chrome(final LaunchOptions launchOptions) {
+        return playwright.chromium().launch(launchOptions);
+    }
 
-  public void close() {
-    playwright.close();
-  }
+    public synchronized Browser firefox(final LaunchOptions launchOptions) {
+        return playwright.firefox().launch(launchOptions);
+    }
+
+    public void close() {
+        playwright.close();
+    }
 }

@@ -5,10 +5,10 @@ import com.microsoft.playwright.BrowserType.LaunchOptions;
 import com.microsoft.playwright.options.Proxy;
 
 public class BrowserOptions extends LaunchOptions {
-  public BrowserOptions(final boolean headless, @Nullable final BrowserProxy browserProxy) {
-    super.setHeadless(headless);
-    if (browserProxy != null) {
-      super.setProxy(new Proxy(browserProxy.getProxyServer()));
+    public BrowserOptions(final boolean headless, @Nullable final BrowserProxy browserProxy) {
+        super.setHeadless(headless);
+        if (browserProxy != null) {
+            super.setProxy(new Proxy(browserProxy.getProxyServer()));
+        }
     }
-  }
 }

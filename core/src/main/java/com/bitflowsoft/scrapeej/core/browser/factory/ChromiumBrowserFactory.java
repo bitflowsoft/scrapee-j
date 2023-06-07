@@ -6,23 +6,23 @@ import com.bitflowsoft.scrapeej.core.browser.ChromiumBrowserSessionContext;
 
 public class ChromiumBrowserFactory implements BrowserSessionFactory {
 
-  private BrowserOptions browserOptions;
+    private BrowserOptions browserOptions;
 
-  public ChromiumBrowserFactory() {
-    this(null);
-  }
+    public ChromiumBrowserFactory() {
+        this(null);
+    }
 
-  public ChromiumBrowserFactory(BrowserOptions browserOptions) {
-    this.browserOptions = browserOptions;
-  }
+    public ChromiumBrowserFactory(BrowserOptions browserOptions) {
+        this.browserOptions = browserOptions;
+    }
 
-  @Override
-  public BrowserSessionContext createBrowser() {
-    return createBrowser(browserOptions);
-  }
+    @Override
+    public BrowserSessionContext createBrowser() {
+        return createBrowser(browserOptions);
+    }
 
-  @Override
-  public BrowserSessionContext createBrowser(BrowserOptions browserOptions) {
-    return new ChromiumBrowserSessionContext(browserOptions);
-  }
+    @Override
+    public BrowserSessionContext createBrowser(BrowserOptions browserOptions) {
+        return new ChromiumBrowserSessionContext(browserOptions);
+    }
 }

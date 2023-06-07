@@ -2,11 +2,11 @@ package com.bitflowsoft.scrapeej.core.concurrent;
 
 public interface EventQueue<Type> {
 
-  boolean add(Type type);
+    boolean add(Type type);
 
-  Type take();
+    Type take();
 
-  boolean isEmpty();
+    boolean isEmpty();
 
-  int size();
+    int size();
 }

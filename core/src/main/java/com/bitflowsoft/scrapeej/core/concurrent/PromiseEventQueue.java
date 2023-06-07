@@ -13,30 +13,30 @@ import static com.bitflowsoft.scrapeej.core.util.RuntimeAssertions.checkNull;
  * */
 public class PromiseEventQueue implements EventQueue<Promise<?>> {
 
-  private final Queue<Promise<?>> queue;
+    private final Queue<Promise<?>> queue;
 
-  public PromiseEventQueue() {
-    this.queue = new LinkedBlockingQueue<>();
-  }
+    public PromiseEventQueue() {
+        this.queue = new LinkedBlockingQueue<>();
+    }
 
-  @Override
-  public boolean add(Promise<?> promise) {
-    checkNull(promise, "promise is null");
-    return queue.add(promise);
-  }
+    @Override
+    public boolean add(Promise<?> promise) {
+        checkNull(promise, "promise is null");
+        return queue.add(promise);
+    }
 
-  @Override
-  public Promise<?> take() {
-    return queue.poll();
-  }
+    @Override
+    public Promise<?> take() {
+        return queue.poll();
+    }
 
-  @Override
-  public boolean isEmpty() {
-    return queue.isEmpty();
-  }
+    @Override
+    public boolean isEmpty() {
+        return queue.isEmpty();
+    }
 
-  @Override
-  public int size() {
-    return queue.size();
-  }
+    @Override
+    public int size() {
+        return queue.size();
+    }
 }

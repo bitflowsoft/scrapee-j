@@ -10,22 +10,22 @@ import java.util.concurrent.atomic.AtomicInteger;
  * */
 public class RoundRobinEventLoopSelector implements EventLoopSelector {
 
-  private final List<EventLoop> eventLoops;
-  private final AtomicInteger index;
+    private final List<EventLoop> eventLoops;
+    private final AtomicInteger index;
 
-  public RoundRobinEventLoopSelector(final List<EventLoop> eventLoops) {
-    this.eventLoops = eventLoops;
-    this.index = new AtomicInteger(0);
-  }
-
-  @Override
-  public EventLoop select() {
-    final int _index = index.incrementAndGet();
-    final int loopSize = eventLoops.size();
-    if (_index > loopSize) {
-      index.set(0);
-      return eventLoops.get(0);
+    public RoundRobinEventLoopSelector(final List<EventLoop> eventLoops) {
+        this.eventLoops = eventLoops;
+        this.index = new AtomicInteger(0);
     }
-    return eventLoops.get(_index - 1);
-  }
+
+    @Override
+    public EventLoop select() {
+        final int _index = index.incrementAndGet();
+        final int loopSize = eventLoops.size();
+        if (_index > loopSize) {
+            index.set(0);
+            return eventLoops.get(0);
+        }
+        return eventLoops.get(_index - 1);
+    }
 }

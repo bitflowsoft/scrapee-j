@@ -6,20 +6,20 @@ import java.util.concurrent.ThreadFactory;
 
 public class DefaultThreadEventLoopExecutor implements Executor {
 
-  private final ThreadFactory threadFactory = Executors.defaultThreadFactory();
-  private static Executor executor;
+    private final ThreadFactory threadFactory = Executors.defaultThreadFactory();
+    private static Executor executor;
 
-  private DefaultThreadEventLoopExecutor() {}
+    private DefaultThreadEventLoopExecutor() {}
 
-  public static synchronized Executor getExecutor() {
-    if (executor == null) {
-      executor = new DefaultThreadEventLoopExecutor();
+    public static synchronized Executor getExecutor() {
+        if (executor == null) {
+            executor = new DefaultThreadEventLoopExecutor();
+        }
+        return executor;
     }
-    return executor;
-  }
 
-  @Override
-  public void execute(final Runnable task) {
-    threadFactory.newThread(task).start();
-  }
+    @Override
+    public void execute(final Runnable task) {
+        threadFactory.newThread(task).start();
+    }
 }

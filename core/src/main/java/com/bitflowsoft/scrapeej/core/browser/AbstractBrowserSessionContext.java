@@ -5,29 +5,29 @@ import com.microsoft.playwright.Page;
 
 public abstract class AbstractBrowserSessionContext implements BrowserSessionContext {
 
-  private final BrowserSession browserSession;
+    private BrowserSession browserSession;
 
-  public AbstractBrowserSessionContext(BrowserOptions browserOptions) {
-    this.browserSession = launch(browserOptions);
-  }
+    public AbstractBrowserSessionContext(BrowserOptions browserOptions) {
+        this.browserSession = launch(browserOptions);
+    }
 
-  @Override
-  public BrowserSession session() {
-    return browserSession;
-  }
+    @Override
+    public BrowserSession session() {
+        return browserSession;
+    }
 
-  @Override
-  public Browser getBrowser() {
-    return browserSession.getBrowser();
-  }
+    @Override
+    public Browser getBrowser() {
+        return browserSession.getBrowser();
+    }
 
-  @Override
-  public Page getPage() {
-    return browserSession.getPage();
-  }
+    @Override
+    public Page getPage() {
+        return browserSession.getPage();
+    }
 
-  @Override
-  public void close() {
-    browserSession.close();
-  }
+    @Override
+    public void close() {
+        browserSession.close();
+    }
 }

@@ -2,7 +2,7 @@ package com.bitflowsoft.scrapeej.core.util;
 
 public class Time {
 
-  public static long milliTime() {
-    return System.currentTimeMillis();
-  }
+    public static long getCurrentTimeMills() {
+        return System.currentTimeMillis();
+    }
 }
