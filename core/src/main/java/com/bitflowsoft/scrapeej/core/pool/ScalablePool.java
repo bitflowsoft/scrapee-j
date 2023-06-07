@@ -7,6 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import com.bitflowsoft.scrapeej.core.browser.BrowserSessionContext;
 import com.bitflowsoft.scrapeej.core.browser.factory.BrowserSessionFactory;
+import com.bitflowsoft.scrapeej.core.util.Time;
 
 public class ScalablePool implements Pool<BrowserSessionContext>  {
 
@@ -55,13 +56,13 @@ public class ScalablePool implements Pool<BrowserSessionContext>  {
         if (browserSessionContextQueue.isEmpty()) {
             if (currentBrowserSize.get() >= maxPoolSize) {
                 long lastTimeMills;
-                long startTimeMills = System.currentTimeMillis();
+                long startTimeMills = Time.milliTime();
                 do {
                     if (currentBrowserSize.get() < maxPoolSize) {
                         sessionContext = select();
                         break;
                     }
-                    lastTimeMills = System.currentTimeMillis();
+                    lastTimeMills = Time.milliTime();
                 } while (lastTimeMills - startTimeMills < timeout);
                 return sessionContext;
             }

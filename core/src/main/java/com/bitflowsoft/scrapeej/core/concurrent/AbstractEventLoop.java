@@ -152,10 +152,10 @@ public abstract class AbstractEventLoop implements EventLoop {
             if (promise == null) {
                 break;
             }
-            long start = Time.getCurrentTimeMills();
+            long start = Time.milliTime();
             promise.run();
             task += 1;
-            logger.info("task finished {}ms", Time.getCurrentTimeMills() - start);
+            logger.info("task finished {}ms", Time.milliTime() - start);
         }
         return task;
     }
@@ -176,9 +176,9 @@ public abstract class AbstractEventLoop implements EventLoop {
             if (promise == null) {
                 break;
             }
-            long start = Time.getCurrentTimeMills();
+            long start = Time.milliTime();
             promise.run();
-            logger.info("task finished {}ms", Time.getCurrentTimeMills() - start);
+            logger.info("task finished {}ms", Time.milliTime() - start);
         }
     }
 }
