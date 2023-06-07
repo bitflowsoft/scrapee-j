@@ -10,7 +10,7 @@ import java.util.concurrent.Callable;
  * */
 public interface EventDispatcher {
 
-    void addEvent(Runnable runnable);
+  void addEvent(Runnable runnable);
 
-    <T> void addEvent(Callable<T> callable);
+  <T> void addEvent(Callable<T> callable);
 }

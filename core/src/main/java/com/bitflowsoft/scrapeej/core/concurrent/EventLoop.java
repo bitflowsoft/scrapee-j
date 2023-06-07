@@ -14,16 +14,16 @@ import java.util.concurrent.ExecutorService;
  * */
 public interface EventLoop extends ExecutorService, Runnable {
 
-    /**
-     * Check event loop thread the currently running thread
-     *
-     * @return running in event loop
-     * */
-    boolean isEventLoop();
+  /**
+   * Check event loop thread the currently running thread
+   *
+   * @return running in event loop
+   * */
+  boolean isEventLoop();
 
-    void loopStart();
+  void loopStart();
 
-    Promise<Void> execute0(Runnable runnable);
+  Promise<Void> execute0(Runnable runnable);
 
-    <T> Promise<T> execute0(Callable<T> runnable);
+  <T> Promise<T> execute0(Callable<T> runnable);
 }

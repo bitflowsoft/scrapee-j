@@ -2,19 +2,19 @@ package com.bitflowsoft.scrapeej.core.concurrent;
 
 public interface Promise<T> extends Runnable {
 
-    void addSuccessListener(PromiseListener<T> listener);
+  void addSuccessListener(PromiseListener<T> listener);
 
-    void addFailureListener(PromiseListener<Throwable> listener);
+  void addFailureListener(PromiseListener<Throwable> listener);
 
-    void notifySuccessListeners();
+  void notifySuccessListeners();
 
-    void notifyFailureListeners();
+  void notifyFailureListeners();
 
-    void setSuccess(T value);
+  void setSuccess(T value);
 
-    void setFailure(Throwable throwable);
+  void setFailure(Throwable throwable);
 
-    T get();
+  T get();
 
-    Throwable getFailure();
+  Throwable getFailure();
 }

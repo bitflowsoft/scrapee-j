@@ -11,16 +11,16 @@ import com.microsoft.playwright.Page;
 
 class FirefoxBrowserSessionContextTest {
 
-    @Test
-    void firefoxBrowserTest() throws Exception {
-        final BrowserOptions options = new BrowserOptions(true, null);
-        final BrowserSessionFactory factory = BrowserFactories.getBrowserFactory(FirefoxBrowserFactory.class);
-        try (BrowserSessionContext browserSessionContext = factory.createBrowser(options)) {
-            Page page = browserSessionContext.getPage();
-            page.navigate("https://playwright.dev/");
-            String title = page.title();
+  @Test
+  void firefoxBrowserTest() throws Exception {
+    final BrowserOptions options = new BrowserOptions(true, null);
+    final BrowserSessionFactory factory = BrowserFactories.getBrowserFactory(FirefoxBrowserFactory.class);
+    try (BrowserSessionContext browserSessionContext = factory.createBrowser(options)) {
+      Page page = browserSessionContext.getPage();
+      page.navigate("https://playwright.dev/");
+      String title = page.title();
 
-            assertEquals(title, "Fast and reliable end-to-end testing for modern web apps | Playwright");
-        }
+      assertEquals(title, "Fast and reliable end-to-end testing for modern web apps | Playwright");
     }
+  }
 }

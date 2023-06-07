@@ -5,16 +5,16 @@ import org.slf4j.LoggerFactory;
 
 public class DefaultEventLoop extends AbstractEventLoop {
 
-    private static final Logger logger = LoggerFactory.getLogger(DefaultEventLoop.class);
+  private static final Logger logger = LoggerFactory.getLogger(DefaultEventLoop.class);
 
-    public DefaultEventLoop() {
-        super(new PromiseEventQueue(), DefaultThreadEventLoopExecutor.getExecutor());
-    }
+  public DefaultEventLoop() {
+    super(new PromiseEventQueue(), DefaultThreadEventLoopExecutor.getExecutor());
+  }
 
-    @Override
-    public void run() {
-        while (!isShutdown()) {
-            runAllTasks();
-        }
+  @Override
+  public void run() {
+    while (!isShutdown()) {
+      runAllTasks();
     }
+  }
 }

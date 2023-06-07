@@ -9,12 +9,12 @@ import java.util.concurrent.TimeUnit;
  * */
 public interface EventLoopGroup extends Iterable<EventLoop> {
 
-    int FIT_SYSTEM_EVENT_LOOP_COUNT = Runtime.getRuntime().availableProcessors() * 2;
+  int FIT_SYSTEM_EVENT_LOOP_COUNT = Runtime.getRuntime().availableProcessors() * 2;
 
-    /**
-     * Kills all currently running tasks and stops all EventLoops.
-     * */
-    void shutdownGracefully();
+  /**
+   * Kills all currently running tasks and stops all EventLoops.
+   * */
+  void shutdownGracefully();
 
-    EventDispatcher getEventDispatcher();
+  EventDispatcher getEventDispatcher();
 }

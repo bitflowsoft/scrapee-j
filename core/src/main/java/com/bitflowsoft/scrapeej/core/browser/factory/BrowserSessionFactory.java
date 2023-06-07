@@ -5,6 +5,7 @@ import com.bitflowsoft.scrapeej.core.browser.BrowserSessionContext;
 
 public interface BrowserSessionFactory {
 
-    BrowserSessionContext createBrowser(BrowserOptions browserOptions);
-    BrowserSessionContext createBrowser();
+  BrowserSessionContext createBrowser(BrowserOptions browserOptions);
+
+  BrowserSessionContext createBrowser();
 }

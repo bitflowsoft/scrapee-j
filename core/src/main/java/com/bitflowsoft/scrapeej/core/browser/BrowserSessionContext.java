@@ -5,11 +5,11 @@ import com.microsoft.playwright.Page;
 
 public interface BrowserSessionContext extends AutoCloseable {
 
-    BrowserSession launch(BrowserOptions browserOptions);
+  BrowserSession launch(BrowserOptions browserOptions);
 
-    BrowserSession session();
+  BrowserSession session();
 
-    Page getPage();
+  Page getPage();
 
-    Browser getBrowser();
+  Browser getBrowser();
 }
