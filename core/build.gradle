@@ -19,6 +19,7 @@ dependencies {
     testImplementation 'org.graalvm.js:js:22.3.1'
     testImplementation 'org.graalvm.js:js-scriptengine:22.3.1'
     testImplementation 'net.sourceforge.htmlunit:htmlunit:2.70.0'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
 }
 
 test {

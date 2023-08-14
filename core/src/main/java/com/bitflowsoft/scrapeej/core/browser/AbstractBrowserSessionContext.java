@@ -5,7 +5,7 @@ import com.microsoft.playwright.Page;
 
 public abstract class AbstractBrowserSessionContext implements BrowserSessionContext {
 
-    private BrowserSession browserSession;
+    private final BrowserSession browserSession;
 
     public AbstractBrowserSessionContext(BrowserOptions browserOptions) {
         this.browserSession = launch(browserOptions);

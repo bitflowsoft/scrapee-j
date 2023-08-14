@@ -1,22 +1,21 @@
-package com.bitflowsoft.scrapeej.core.pool;
+package com.bitflowsoft.scrapeej.core.browser.pool;
 
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import com.bitflowsoft.scrapeej.core.browser.BrowserSessionContext;
 import com.bitflowsoft.scrapeej.core.browser.factory.BrowserSessionFactory;
-import com.bitflowsoft.scrapeej.core.util.Time;
 
-public class ScalablePool implements Pool<BrowserSessionContext>  {
+public class ScalableBrowserPool implements BrowserPool<BrowserSessionContext> {
 
     private final int poolSize, maxPoolSize;
     private final Queue<BrowserSessionContext> browserSessionContextQueue;
     private final BrowserSessionFactory browserSessionFactory;
     private final AtomicInteger currentBrowserSize;
 
-    public ScalablePool(final int poolSize, final int maxPoolSize, BrowserSessionFactory browserSessionFactory) {
+    public ScalableBrowserPool(
+		final int poolSize, final int maxPoolSize, BrowserSessionFactory browserSessionFactory) {
         this.poolSize = poolSize;
         this.maxPoolSize = maxPoolSize;
         this.browserSessionContextQueue = new ConcurrentLinkedQueue<>();
@@ -56,22 +55,22 @@ public class ScalablePool implements Pool<BrowserSessionContext>  {
         if (browserSessionContextQueue.isEmpty()) {
             if (currentBrowserSize.get() >= maxPoolSize) {
                 long lastTimeMills;
-                long startTimeMills = Time.milliTime();
+                long startTimeMills = System.currentTimeMillis();
                 do {
                     if (currentBrowserSize.get() < maxPoolSize) {
                         sessionContext = select();
                         break;
                     }
-                    lastTimeMills = Time.milliTime();
+                    lastTimeMills = System.currentTimeMillis();
                 } while (lastTimeMills - startTimeMills < timeout);
                 return sessionContext;
             }
-            return browserSessionFactory.createBrowser();
+            sessionContext = browserSessionFactory.createBrowser();
         }
         else {
-            currentBrowserSize.incrementAndGet();
             sessionContext = browserSessionContextQueue.poll();
         }
+        currentBrowserSize.incrementAndGet();
         return sessionContext;
     }
 
