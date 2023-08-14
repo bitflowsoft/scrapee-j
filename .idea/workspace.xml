@@ -4,23 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15be0cbf-d142-4670-a18f-2482ad89bdaf" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/util/ReflectionUtils.java" afterDir="false" />
+    <list default="true" id="15be0cbf-d142-4670-a18f-2482ad89bdaf" name="변경" comment="squash! Revert &quot;chore: change all code styles&quot;">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/browser/pool/BrowserPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/browser/pool/factory/BrowserPoolFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/browser/pool/factory/ScalableBrowserPoolFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/AbstractEventLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/AbstractEventLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/AbstractPromise.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/AbstractPromise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/DefaultEventLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/DefaultEventLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/DefaultEventLoopGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/DefaultEventLoopGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/DefaultThreadEventLoopExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/DefaultThreadEventLoopExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventLoopGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventLoopGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/EventQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/RoundRobinEventLoopSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/RoundRobinEventLoopSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/UnsafePromiseEventQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/concurrent/PromiseEventQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/event/EventHolder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/event/EventType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/event/RequestEventHolder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/test/java/com/bitflowsoft/scrapeej/core/concurrent/RoundRobinEventLoopSelectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/test/java/com/bitflowsoft/scrapeej/core/concurrent/RoundRobinEventLoopSelectorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/core/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/browser/AbstractBrowserSessionContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/browser/AbstractBrowserSessionContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/browser/factory/ChromiumBrowserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/browser/factory/ChromiumBrowserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/pool/Pool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/pool/ScalablePool.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/browser/pool/ScalableBrowserPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/com/bitflowsoft/scrapeej/core/browser/ChromiumBrowserSessionContextTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/test/java/com/bitflowsoft/scrapeej/core/browser/ChromiumBrowserSessionContextTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/test/java/com/bitflowsoft/scrapeej/core/pool/ScalablePoolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/test/java/com/bitflowsoft/scrapeej/core/browser/pool/ScalableBrowserPoolTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,18 +28,35 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar:///Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Queue.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -56,9 +69,13 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pathVariables&quot;
   }
 }</component>
@@ -67,24 +84,14 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.bitflowsoft.scrapeej.core.pool" />
+      <recent name="com.bitflowsoft.scrapeej.core.browser" />
+      <recent name="com.bitflowsoft.scrapeej.core.net" />
       <recent name="com.bitflowsoft.scrapeej.core.concurrent" />
     </key>
   </component>
-  <component name="RunManager" selected="애플리케이션.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bitflowsoft.scrapeej.core.Main" />
-      <module name="scrapee-j.core.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bitflowsoft.scrapeej.core.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RoundRobinEventLoopSelectorTest.roundRobinEventLoopSelectTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ScalableBrowserPoolTest">
+    <configuration name="ChromiumBrowserSessionContextTest.cef" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -97,7 +104,7 @@
           <list>
             <option value=":core:test" />
             <option value="--tests" />
-            <option value="&quot;com.bitflowsoft.scrapeej.core.concurrent.RoundRobinEventLoopSelectorTest.roundRobinEventLoopSelectTest&quot;" />
+            <option value="&quot;com.bitflowsoft.scrapeej.core.browser.ChromiumBrowserSessionContextTest.cef&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -107,7 +114,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="RoundRobinEventLoopSelectorTest.roundRobinThreadSafeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ChromiumBrowserSessionContextTest.chromiumBrowserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -120,21 +127,90 @@
           <list>
             <option value=":core:test" />
             <option value="--tests" />
-            <option value="&quot;com.bitflowsoft.scrapeej.core.concurrent.RoundRobinEventLoopSelectorTest.roundRobinThreadSafeTest&quot;" />
+            <option value="&quot;com.bitflowsoft.scrapeej.core.browser.ChromiumBrowserSessionContextTest.chromiumBrowserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ScalableBrowserPoolTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":core:test" />
+            <option value="--tests" />
+            <option value="&quot;com.bitflowsoft.scrapeej.core.browser.pool.ScalableBrowserPoolTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ScalableBrowserPoolTest.autoScaleReleaseWaitingTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":core:test" />
+            <option value="--tests" />
+            <option value="&quot;com.bitflowsoft.scrapeej.core.browser.pool.ScalableBrowserPoolTest.autoScaleReleaseWaitingTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="scrapee-j [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="애플리케이션.Main" />
-        <item itemvalue="Gradle.RoundRobinEventLoopSelectorTest.roundRobinThreadSafeTest" />
-        <item itemvalue="Gradle.RoundRobinEventLoopSelectorTest.roundRobinEventLoopSelectTest" />
+        <item itemvalue="Gradle.ScalableBrowserPoolTest" />
+        <item itemvalue="Gradle.ScalableBrowserPoolTest.autoScaleReleaseWaitingTest" />
+        <item itemvalue="Gradle.ChromiumBrowserSessionContextTest.chromiumBrowserTest" />
+        <item itemvalue="Gradle.scrapee-j [dependencies]" />
+        <item itemvalue="Gradle.ChromiumBrowserSessionContextTest.cef" />
       </list>
     </recent_temporary>
   </component>
@@ -147,6 +223,14 @@
       <option name="presentableId" value="Default" />
       <updated>1679637891528</updated>
     </task>
+    <task id="LOCAL-00001" summary="squash! Revert &quot;chore: change all code styles&quot;">
+      <created>1686159093739</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686159093739</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,16 +244,16 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="squash! Revert &quot;chore: change all code styles&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="squash! Revert &quot;chore: change all code styles&quot;" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/core/src/main/java/com/bitflowsoft/scrapeej/core/Main.java</url>
-          <line>15</line>
-          <properties class="com.bitflowsoft.scrapeej.core.Main" method="main">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.friwi/jcef-api/jcef-87476e9+cef-110.0.25+g75b1c96+chromium-110.0.5481.78/3dcbd408c34d846f424755212810b2d4c0db2715/jcef-api-jcef-87476e9+cef-110.0.25+g75b1c96+chromium-110.0.5481.78-sources.jar!/org/cef/callback/CefStringVisitor.java</url>
+          <line>9</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

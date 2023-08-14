@@ -1,3 +1,6 @@
 rootProject.name = 'scrapee-j'
 include 'core'
+include 'drivers'
+include 'drivers:chrome'
+findProject(':drivers:chrome')?.name = 'chrome'
 
